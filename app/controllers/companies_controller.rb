@@ -32,6 +32,14 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def destroy
+    if @company.destroy
+      redirect_to companies_path
+    else
+      render :index
+    end
+  end
+  
   private
     def company_params
       params.require(:company).permit(
