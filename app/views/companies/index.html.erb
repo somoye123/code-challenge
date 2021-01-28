@@ -9,6 +9,7 @@
         <a href="<%= company_path(company) %>" class="list-group-item list-group-item-action">
           <%= company.name %>
         </a>
+        <a href="/companies/<%= company.id %>" data-method="delete" data-confirm="Are you sure">Delete Company</a>
       <% end %>
     </ul>
   <% end %>
