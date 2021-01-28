@@ -8,6 +8,12 @@ class Company < ApplicationRecord
 
   before_save :update_company_city_and_state, if: :zip_code_changed?
 
+  def display_company_city_and_state
+    city_name =  self.city.present?  ? self.city : "Unknown city"
+    state_name = self.state.present? ? self.state : "Unknown state"
+    "#{city_name}, #{ state_name }" 
+  end
+
   def background_color
     self.color || DEFAULT_COLOR
   end
