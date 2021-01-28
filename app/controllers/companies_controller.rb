@@ -55,7 +55,8 @@ class CompaniesController < ApplicationController
         :phone,
         :email,
         :owner_id,
-        services: []
+        :color,
+        services: [],
       )
     end
 
