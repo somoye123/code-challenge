@@ -6,6 +6,8 @@ class Company < ApplicationRecord
   validates :email, format: { with: VALID_EMAIL_REGEX,  message: "must end with @getmainstreet.com" }, allow_blank: true
   validates :zip_code, numericality: { only_integer: true }, length: { is: 5 }
 
+  before_save :update_company_city_and_state, if: :zip_code_changed?
+
   def background_color
     self.color || DEFAULT_COLOR
   end
