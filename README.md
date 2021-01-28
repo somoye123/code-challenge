@@ -73,7 +73,13 @@ _Assessing: Ability to produce clean tests and documentation for code._
 
 ### **☐ Suggest a new task for this challenge**
 
-Write up a proposed challenge to add to this repository for assessing developers. Do not solve the code challenge. Just write the task, and why this would make a good challenge to include for future developers.
+I would suggest the following:
+
+- Authentication and Authorization
+
+- Pagination
+
+- N+1 queries
 
 _Assessing: Engineering instinct, writing, ability to document up a deliverable concisely._
 
@@ -83,7 +89,6 @@ _Assessing: Engineering instinct, writing, ability to document up a deliverable 
 - Originality and creativity in given solutions
 - Improving the overall UX of this challenge
 - Deploying your solutions to a server
-
 
 ## How do I submit a Pull Request?
 
@@ -100,16 +105,16 @@ Since this a public repository, submitting a Pull Request will not be the same a
 
 - Any changes made in the original repository should not be synced to your forked repository. The following commands enable us to track the original repository as a remote of the fork.
 
-   ```
-     git remote add --track master upstream https://github.com/main-street/code-challenge.git
-     git fetch upstream
-   ```
+  ```
+    git remote add --track master upstream https://github.com/main-street/code-challenge.git
+    git fetch upstream
+  ```
 
 - Create a new branch for your changes.
 
-   ```
-    git checkout -b <your-branch-name> upstream/master
-   ```
+  ```
+   git checkout -b <your-branch-name> upstream/master
+  ```
 
 - Make your changes, stage, and commit files necessary.
 - Push the changes to remote.
