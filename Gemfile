@@ -21,6 +21,8 @@ group :development, :test do
   gem "rubocop", require: false
   gem "rubocop-performance"
   gem "rubocop-rails"
+    # Use RSpec for specs
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -35,6 +37,8 @@ group :test do
   gem "selenium-webdriver"
   gem "minitest-reporters"
   gem "webdrivers"
+  gem 'shoulda-matchers', '~> 4.0'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
