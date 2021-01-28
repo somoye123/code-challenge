@@ -2,7 +2,6 @@ require "test_helper"
 require "application_system_test_case"
 
 class CompaniesControllerTest < ApplicationSystemTestCase
-
   def setup
     @company = companies(:hometown_painting)
   end
@@ -57,5 +56,4 @@ class CompaniesControllerTest < ApplicationSystemTestCase
     assert_equal "New Test Company", last_company.name
     assert_equal "28173", last_company.zip_code
   end
-
 end

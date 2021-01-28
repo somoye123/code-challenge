@@ -1,8 +1,14 @@
 # Code Challenge
 
-Welcome to the Main Street code challenge. This repository includes a very basic rails app to be used to assessment and testing purposes only.
+Welcome to the Main Street code challenge. This repository includes a very basic Rails app used for assessment and testing purposes only.
 
-Note: This codebase is not nearly or fully representative of our platform however it's a good small sample of the kinds of technology and problems we are solving.
+## The Main Street Pitch (Context)
+
+[Our website](https://www.getmainstreet.com/) provides a reasonable overview of the Main Street Pitch.
+
+Main Street is a platform that helps entrepreneurs start and run their companies in the service industry. For now it's Painting, but in the future we hope to address many other services such as Lawncare, Pest Control, Plumbing, Electrical etc.
+
+This codebase provides a small sample of the kinds of technology and problems we are solving.
 
 ## Getting Started
 
@@ -23,11 +29,6 @@ Once that runs you should be able to run the following 2 commands in separate te
 1.  `rails s` - this will start the rails server locally.
 2.  `bin/webpack-dev-server` - this will start to watch and recompile the JavaScripts found in `app/javascript`
 
-Note
-
-- This repository was initialized using [JumpStart](https://github.com/excid3/jumpstart)
-- We can also use `foreman` to spin up multiple processes at the same time`foreman start -f Procfile.dev`
-
 ## Challenges
 
 ### **Challenge Steps**
@@ -44,7 +45,7 @@ _Assessing: Basic Rails Knowledge and established best practices._
 
 ### **☐ Add Custom Validation to company email**
 
-(When Present) All email addresses for new companies should only be a @getmainstreet.com domain. A custom error should render when attempting to create or update a company when the email does not match this domain. This should only be when email is present. Blank emails can be ignored. Should validate on both front end and back end.
+(When Present) All email addresses for new companies should only be a `@getmainstreet.com` domain. A custom error should render when attempting to create or update a company when the email does not match this domain. This should only be when email is present. Blank emails can be ignored. Should validate on both front end and back end.
 
 _Assessing: Basic Rails Knowledge and established best practices._
 
@@ -84,32 +85,44 @@ _Assessing: Engineering instinct, writing, ability to document up a deliverable 
 - Deploying your solutions to a server
 
 
-## How to raise a Pull request?
+## How do I submit a Pull Request?
 
-Since this a public repository, raising a Pull Request will not be the same as when you're a collaborator. The Instructions below will help you push the changes to the code challenge repo —
+Since this a public repository, submitting a Pull Request will not be the same as when you're a collaborator. The instructions below will help you push the changes to the code challenge repo.
 
-- Fork the project to your personal Github
-- Clone the challenge to your local from your new forked repo in your personal git account
+- Fork the project to your personal Github.
+- Clone the challenge to your local from your new forked repo in your personal git account.
+
   ```
     git clone <forked account — main street coding challenge https url>
-    
+
     example: git clone https://github.com/Sushanthbc/code-challenge.git
   ```
-- Any changes made in the original repository would not be synced to forked repository in your personal git account. Below commands enable us to track the original repository as a remote of the fork
+
+- Any changes made in the original repository should not be synced to your forked repository. The following commands enable us to track the original repository as a remote of the fork.
+
    ```
      git remote add --track master upstream https://github.com/main-street/code-challenge.git
      git fetch upstream
    ```
-- Create a new branch for your changes
-   ```
-    git checkout -b readme-update upstream/master
-   ```
-- Make your changes, stage and commit files necessary.
 
-- Push the changes to remote
-  ```
-   git push -u origin readme-update origin
-  ```
-- You can now go to Github, and raise a PR with necessary details.
+- Create a new branch for your changes.
 
-- Happy Coding, and All the best, please don't hesitate to shoot an email to Recruitment team, if you have any issues while pushing the code.
+   ```
+    git checkout -b <your-branch-name> upstream/master
+   ```
+
+- Make your changes, stage, and commit files necessary.
+- Push the changes to remote.
+
+  ```
+   git push -u origin <your-branch-name> origin
+  ```
+
+- You can now go to Github, and submit a PR with necessary details.
+- Happy Coding! Please don't hesitate to shoot an email to the recruitment team if you have any issues while pushing the code.
+
+## Tips
+
+- Submit code as you would in a professional environment.
+- Keep your diffs clean. If your code editor autoformats on save, consider turning this off for this repo.
+- If you choose to set up `RSpec` (or add other external libs), consider isolating those changes in a separate commit.

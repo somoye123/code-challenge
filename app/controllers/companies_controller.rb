@@ -30,25 +30,23 @@ class CompaniesController < ApplicationController
     else
       render :edit
     end
-  end  
+  end
 
   private
+    def company_params
+      params.require(:company).permit(
+        :name,
+        :legal_name,
+        :description,
+        :zip_code,
+        :phone,
+        :email,
+        :owner_id,
+        services: []
+      )
+    end
 
-  def company_params
-    params.require(:company).permit(
-      :name,
-      :legal_name,
-      :description,
-      :zip_code,
-      :phone,
-      :email,
-      :owner_id,
-      services: []
-    )
-  end
-
-  def set_company
-    @company = Company.find(params[:id])
-  end
-  
+    def set_company
+      @company = Company.find(params[:id])
+    end
 end
