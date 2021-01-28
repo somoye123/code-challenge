@@ -9,4 +9,21 @@ class Company < ApplicationRecord
   def background_color
     self.color || DEFAULT_COLOR
   end
+
+  private
+
+  def update_company_city_and_state
+    zip_code = ZipCodes.identify(self.zip_code)
+    if zip_code.present? && zip_code[:city].present?
+      self.city = zip_code[:city]
+    else
+      self.city = nil
+    end
+
+    if zip_code.present? && zip_code[:state_code].present?
+      self.state = zip_code[:state_code]
+    else
+      self.state = nil
+    end
+  end
 end
